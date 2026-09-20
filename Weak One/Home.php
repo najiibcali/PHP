@@ -21,6 +21,8 @@ echo 'my name is $Fullname';
 
 print "my name is $Fullname";
 
+Define("Days_of_Weak",7);
+
 echo strlen($Fullname);
 echo str_word_count($Fullname);
 
