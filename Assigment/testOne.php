@@ -7,6 +7,33 @@
 </head>
 <body>
 
+
+<table>
+<thead>
+<tr>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+ <?php
+
+// foreach($info as $row);
+
+$info = array(
+    "name"=>"ali",
+);
+// ?>
+<tr>
+<?php
+   foreach($info as $value){
+    '<td>$value</td>';
+   }
+   ?>
+</tr>
+
+</tbody>
+</table>
+
 <?php
 $number1 = 10;
 $number2 = 20;
@@ -79,11 +106,99 @@ for($i = 50;$i>2;$i--){
 
 // echo "reverse number ";
 
-// $numbers = 1234;
-// $reversenumbers = 0;
+$number = 12345;
+$reverse = 0;
+
+while ($number > 0) {
+    $digit = $number % 10;
+    $reverse = ($reverse * 10) + $digit;
+    $number = (int)($number / 10);
+}
+
+echo "Reverse = " . $reverse;
 
 
 
+echo "Least Common Multiple <br>";
+
+$numberone= 12;
+$numbertwo= 8; 
+
+for($i=1;$i<50;$i++){
+    if($i % $numberone == 0 && $i % $numbertwo ==0){
+        echo "number is $i <br>";
+        break;
+    }
+};
+
+
+
+echo "Highest Common Factor <br>";
+
+
+$numbertree= 12;
+$numberfour= 8; 
+$hcf = 0;
+
+for($i=1;$i<50;$i++){
+    if($numbertree % $i == 0 && $numberfour % $i ==0){
+        $hcf = $i;
+    }
+};
+
+echo "number is $hcf";
+
+
+echo "<table border='1' cellpadding='8'>";
+
+for ($i = 1; $i <= 12; $i++) {
+
+    echo "<tr>";
+
+    for ($j = 1; $j <= 12; $j++) {
+
+        echo "<td>" . ($i * $j) . "</td>";
+
+    }
+
+    echo "</tr>";
+}
+
+echo "</table>";
+
+
+
+echo "Prime number";
+
+$number = 7;
+$isPrime = true;
+
+if ($number <= 1) {
+    $isPrime = false;
+} else {
+
+    for ($i = 2; $i < $number; $i++) {
+
+        if ($number % $i == 0) {
+            $isPrime = false;
+            break;
+        }
+    }
+}
+
+if ($isPrime) {
+    echo "$number is a prime number";
+} else {
+    echo "$number is a non-prime number";
+};
+
+
+echo "numbers 10-50";
+
+
+for($i =9;$i <=50;$i++){
+    echo "$i<br>";
+}
 
 
 
